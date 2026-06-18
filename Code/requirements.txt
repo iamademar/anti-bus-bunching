@@ -1,0 +1,11 @@
+# Anti-Bunching Copilot — experiment dependencies
+# Tested with Python 3.12 (CapyMOA needs a JVM; Java 11+ must be on PATH / JAVA_HOME).
+# Create the env with:  python3.12 -m venv .venv && .venv/bin/pip install -r requirements.txt
+capymoa==0.13.0
+pandas==2.3.3
+pyarrow==24.0.0
+numpy==2.4.6
+scikit-learn==1.9.0
+matplotlib==3.10.9
+PyYAML==6.0.3
+jupyter==1.1.1

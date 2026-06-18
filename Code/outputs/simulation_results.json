@@ -1,0 +1,75 @@
+{
+  "baseline": {
+    "bunch_count": 21123,
+    "n_arrivals": 109029,
+    "frac_bunched": 0.19373744600060536,
+    "mean_cv": 0.7960492022394802,
+    "total_excess_wait_min": 201978.47826355163
+  },
+  "all_fired": {
+    "bunch_count": 18463,
+    "n_arrivals": 107365,
+    "frac_bunched": 0.17196479299585526,
+    "mean_cv": 0.7684907966756526,
+    "total_excess_wait_min": 182195.9570380898,
+    "mode": "all_fired",
+    "ease_off_seconds": 8.0,
+    "n_easeoffs": 11015,
+    "d_bunch_count": 2660,
+    "d_bunch_count_pct": 12.592908204327035,
+    "d_cv_pct": 3.461897265432727,
+    "d_excess_wait_pct": 9.794370863438528
+  },
+  "true_positive_only": {
+    "bunch_count": 18439,
+    "n_arrivals": 107376,
+    "frac_bunched": 0.17172366264342126,
+    "mean_cv": 0.768417781007871,
+    "total_excess_wait_min": 182196.94972640602,
+    "mode": "true_positive_only",
+    "ease_off_seconds": 8.0,
+    "n_easeoffs": 10721,
+    "d_bunch_count": 2684,
+    "d_bunch_count_pct": 12.70652842872698,
+    "d_cv_pct": 3.471069521064189,
+    "d_excess_wait_pct": 9.793879381214905
+  },
+  "sensitivity": [
+    {
+      "ease_off_seconds": 4.0,
+      "d_bunch_count": 2545,
+      "d_bunch_count_pct": 12.048477962410642,
+      "d_cv_pct": 3.454896355998555,
+      "d_excess_wait_pct": 9.769129277773752,
+      "bunch_count": 18578,
+      "total_excess_wait_min": 182246.9396087051
+    },
+    {
+      "ease_off_seconds": 8.0,
+      "d_bunch_count": 2660,
+      "d_bunch_count_pct": 12.592908204327035,
+      "d_cv_pct": 3.461897265432727,
+      "d_excess_wait_pct": 9.794370863438528,
+      "bunch_count": 18463,
+      "total_excess_wait_min": 182195.9570380898
+    },
+    {
+      "ease_off_seconds": 12.0,
+      "d_bunch_count": 2587,
+      "d_bunch_count_pct": 12.247313355110544,
+      "d_cv_pct": 3.3603984748405953,
+      "d_excess_wait_pct": 9.594613528964913,
+      "bunch_count": 18536,
+      "total_excess_wait_min": 182599.42386247945
+    },
+    {
+      "ease_off_seconds": 16.0,
+      "d_bunch_count": 2556,
+      "d_bunch_count_pct": 12.10055389859395,
+      "d_cv_pct": 3.322731634776499,
+      "d_excess_wait_pct": 9.548778118844169,
+      "bunch_count": 18567,
+      "total_excess_wait_min": 182692.0015263472
+    }
+  ]
+}

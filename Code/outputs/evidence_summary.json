@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "n_windows": 12005,
+    "n_stops": 1022,
+    "n_days": 3,
+    "median_cv": 0.7280736516869394,
+    "mean_cv": 0.7960492022394802,
+    "mean_excess_wait_min": 16.82452963461488,
+    "total_excess_pax_min_capped": 1693293.9073288697,
+    "total_excess_pax_min_uncapped": 1693293.9073288697,
+    "total_excess_pax_min_per_day_capped": 564431.3024429566
+  },
+  "frac_bunched_now": 0.19373744600060536,
+  "frac_warning_now": 0.09802896477084079,
+  "label_frac": {
+    "0": 0.7028955598969082,
+    "2": 0.20189123994533564,
+    "1": 0.0952132001577562
+  }
+}

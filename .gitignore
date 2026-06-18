@@ -1,0 +1,23 @@
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw SUNT dataset — NOT redistributed here (1.4 GB). Download it yourself (see README)
+# and point Code/config.yaml: paths.od_dir / gtfs_dir at it.
+Dataset/
+**/*.parquet
+Code/data/od/
+Code/data/raw/
+
+# OS cruft
+.DS_Store
+
+# NOTE: we deliberately DO commit the generated, reproducible artifacts so the model and
+# figures can be reproduced without the 1.4 GB download:
+#   Code/data/processed/features.csv   (~18 MB)
+#   Code/outputs/                      (small JSON/CSV)
+#   Code/figures/                      (PNGs)

@@ -1,0 +1,8 @@
+group,indicator,before,after,improvement_pct
+improves,Bunching events (count),"21,123","18,463",12.592908204327035
+improves,Bunching rate (% of arrivals),19.4%,17.2%,11.238226504070907
+improves,Avoidable wait (passenger-min),"201,978","182,196",9.794370863438528
+improves,Headway irregularity (mean CV),0.796,0.768,3.461897265432727
+~unchanged,Mean headway deviation (min),25.4,25.1,1.0222853999174135
+~unchanged,Median wait (min),10.7,10.7,0.07763975155279063
+~unchanged,"Wait spread (std of wait, min)",33.9,34.1,-0.4495779197400572

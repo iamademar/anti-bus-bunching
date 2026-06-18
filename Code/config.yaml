@@ -1,0 +1,54 @@
+# Anti-Bunching Copilot — experiment configuration
+# Edit this to widen/narrow the experiment. The notebook and CLI scripts both read it.
+
+paths:
+  # OD parquet files (the primary, essential dataset). NOT shipped in this repo (1.4 GB).
+  # Download the public SUNT release (see README) and point this at its od/ folder.
+  # Path is resolved relative to the repo root (the folder that holds src/ and config.yaml).
+  od_dir: "Dataset/SUNT/data/od"
+  # Full GTFS (optional — only for coords / scheduled-headway). NOT the 6-row data/*.csv samples.
+  gtfs_dir: "Dataset/SUNT/data/raw/GTFS_INTEGRA_SALVADOR2"
+  processed: "data/processed/features.csv"
+  outputs_dir: "outputs"
+  figures_dir: "figures"
+
+scope:
+  # The 8 busiest routes on 2024-03-01 (by stop-event count). A network-level "busy-route"
+  # scope: 1007/1386/1346/1649 are the original four; 12503/1320/1637/1413 complete the top-8.
+  routes: ["1007", "1386", "1346", "1649", "12503", "1320", "1637", "1413"]
+  directions: ["I", "V"]
+  # Date range (inclusive). Multiple days exercise cross-day drift (and make `dow` informative).
+  start_date: "2024-03-01"
+  end_date: "2024-03-03"
+
+label:
+  # Bunching = forward headway drops below `bunch_frac` * rolling-local-median-headway
+  # within the next horizon (minutes OR stops, whichever the builder uses).
+  bunch_frac: 0.40          # < 40% of local median headway = bunching
+  warn_frac: 0.60           # < 60% = warning (3-class: ok/warning/bunching)
+  horizon_stops: 3          # look K stops ahead
+  horizon_minutes: 10       # ...or N minutes ahead (builder uses stops by default)
+  headway_window: 8         # rolling window (in arrivals) for the "local median headway"
+
+preprocess:
+  drop_nonmonotonic: true   # drop trips whose stop_time isn't monotonic (~2-3%)
+  min_headway_seconds: 30   # ignore implausibly tiny gaps as data artefacts
+
+model:
+  arf_ensemble_size: 25
+  grace_period: 200
+  adwin_delta: 0.002
+  windowed_eval_size: 1000  # rolling-metric window for prequential plots
+  random_seed: 42
+
+evidence:
+  # Descriptive "is bunching real and costly?" analysis (no ML). See src/evidence.py.
+  min_arrivals_per_stop: 5  # ignore (route,dir,stop) groups with too few arrivals to be reliable
+  cv_clip: 3.0              # clip per-stop headway CV so a few artefact stops can't dominate the wait total
+
+simulate:
+  # Counterfactual "would the nudge help?" simulation (clearly labelled). See src/simulate.py.
+  ease_off_seconds: 8       # bounded ease-off added to a nudged bus's subsequent arrivals (s/stop)
+  max_total_easeoff_min: 1.5  # cap on cumulative ease-off per trip (a small voluntary hold, not a big one)
+  close_threshold: 0.60     # only ease off when the bus is actually closing (headway_ratio < this)
+  sensitivity_seconds: [4, 8, 12, 16]  # sweep the ease-off magnitude to show the result isn't knife-edge

@@ -1,0 +1,129 @@
+{
+  "moved": [
+    [
+      "Bunching events (count)",
+      "21,123",
+      "18,463",
+      12.592908204327035
+    ],
+    [
+      "Bunching rate (% of arrivals)",
+      "19.4%",
+      "17.2%",
+      11.238226504070907
+    ],
+    [
+      "Avoidable wait (passenger-min)",
+      "201,978",
+      "182,196",
+      9.794370863438528
+    ],
+    [
+      "Headway irregularity (mean CV)",
+      "0.796",
+      "0.768",
+      3.461897265432727
+    ]
+  ],
+  "unchanged": [
+    [
+      "Mean headway deviation (min)",
+      "25.4",
+      "25.1",
+      1.0222853999174135
+    ],
+    [
+      "Median wait (min)",
+      "10.7",
+      "10.7",
+      0.07763975155279063
+    ],
+    [
+      "Wait spread (std of wait, min)",
+      "33.9",
+      "34.1",
+      -0.4495779197400572
+    ]
+  ],
+  "ablation_tp_only": {
+    "d_bunch_count_pct": 12.70652842872698,
+    "d_excess_wait_pct": 9.793879381214905
+  },
+  "n_easeoffs": 11015,
+  "crowding": {
+    "loading_vs_ratio_r": 0.09146913767895389,
+    "loading_cv": 0.8013055384402125,
+    "boardings_vs_headway_r": 0.003806832815885283
+  },
+  "travel_time_peak_offpeak": [
+    {
+      "route": "1007",
+      "peak_min": 99.49166666666667,
+      "offpeak_min": 84.05,
+      "delta_pct": 18.372000793178675,
+      "n_peak": 84,
+      "n_off": 161
+    },
+    {
+      "route": "12503",
+      "peak_min": 94.98333333333333,
+      "offpeak_min": 93.35,
+      "delta_pct": 1.7496875557936156,
+      "n_peak": 87,
+      "n_off": 149
+    },
+    {
+      "route": "1320",
+      "peak_min": 66.30833333333334,
+      "offpeak_min": 64.98333333333333,
+      "delta_pct": 2.0389843549628153,
+      "n_peak": 116,
+      "n_off": 203
+    },
+    {
+      "route": "1346",
+      "peak_min": 49.483333333333334,
+      "offpeak_min": 45.025000000000006,
+      "delta_pct": 9.901906348324992,
+      "n_peak": 162,
+      "n_off": 300
+    },
+    {
+      "route": "1386",
+      "peak_min": 92.56666666666666,
+      "offpeak_min": 91.11666666666667,
+      "delta_pct": 1.5913663800987619,
+      "n_peak": 107,
+      "n_off": 204
+    },
+    {
+      "route": "1413",
+      "peak_min": 88.06666666666666,
+      "offpeak_min": 82.775,
+      "delta_pct": 6.392831974227311,
+      "n_peak": 90,
+      "n_off": 152
+    },
+    {
+      "route": "1637",
+      "peak_min": 78.1,
+      "offpeak_min": 79.09166666666667,
+      "delta_pct": -1.2538194078600875,
+      "n_peak": 147,
+      "n_off": 246
+    },
+    {
+      "route": "1649",
+      "peak_min": 83.33333333333333,
+      "offpeak_min": 84.11666666666666,
+      "delta_pct": -0.9312462849217336,
+      "n_peak": 107,
+      "n_off": 192
+    }
+  ],
+  "travel_time_median": {
+    "peak_min": 85.69999999999999,
+    "offpeak_min": 83.4125,
+    "delta_pct": 2.742394725011233
+  }
+}
