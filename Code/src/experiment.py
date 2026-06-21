@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 from .config import ensure_java_home
-from .features import FEATURE_COLS
+from .features import FEATURE_COLS, FEATURE_TRAIN
 
 BUNCHING = 2  # class id
 
@@ -32,7 +32,7 @@ def _make_stream(X: np.ndarray, y: np.ndarray):
     return NumpyStream(
         X.astype(float), y.astype(int),
         dataset_name="anti_bunching",
-        feature_names=list(FEATURE_COLS),
+        feature_names=list(FEATURE_TRAIN),
         target_type="categorical",
     )
 
@@ -61,7 +61,7 @@ def run_prequential(df: pd.DataFrame, cfg) -> dict:
     ensure_java_home()
     from capymoa.drift.detectors import ADWIN
 
-    X = df[FEATURE_COLS].to_numpy(dtype=float)
+    X = df[FEATURE_TRAIN].to_numpy(dtype=float)
     y = df["label"].to_numpy(dtype=int)
     n = len(df)
 
@@ -146,7 +146,7 @@ def bake_off(df: pd.DataFrame, cfg, models: list[str] | None = None) -> pd.DataF
     )
     from . import baselines as B
 
-    X = df[FEATURE_COLS].to_numpy(dtype=float)
+    X = df[FEATURE_TRAIN].to_numpy(dtype=float)
     y = df["label"].to_numpy(dtype=int)
     seed = int(cfg.model["random_seed"])
     gp = int(cfg.model["grace_period"])
