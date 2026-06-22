@@ -1,0 +1,249 @@
+\begin{thebibliography}{24}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Aguiar et~al.(2024)Aguiar, Krawczyk and Cano}]{Aguiar2024}
+\bibinfo{author}{Aguiar, G.}, \bibinfo{author}{Krawczyk, B.},
+  \bibinfo{author}{Cano, A.}, \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{A survey on learning from imbalanced data streams:
+  taxonomy, challenges, empirical study, and reproducible experimental
+  framework}.
+\newblock \bibinfo{journal}{Machine Learning} \bibinfo{volume}{113},
+  \bibinfo{pages}{4165--4243}.
+\newblock \DOIprefix\doi{10.1007/s10994-023-06353-6}.
+%Type = Techreport
+\bibitem[{{Banco Nacional de Desenvolvimento Econ{\^o}mico e Social (BNDES)}
+  and {Minist{\'e}rio das Cidades}(2025)}]{bndes2025salvador}
+\bibinfo{author}{{Banco Nacional de Desenvolvimento Econ{\^o}mico e Social
+  (BNDES)}}, \bibinfo{author}{{Minist{\'e}rio das Cidades}},
+  \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Relat{\'o}rio de Diagn{\'o}stico: Regi{\~a}o
+  Metropolitana de Salvador}.
+\newblock \bibinfo{type}{Relat{\'o}rio de Diagn{\'o}stico}
+  \bibinfo{number}{Volume 4}. Estudo Nacional de Mobilidade Urbana.
+\newblock \URLprefix
+  \url{https://www.bndes.gov.br/arquivos/fep-mobilidade-urbana/relatorios-diagnostico/relatorio-Salvador-vol-4.pdf}.
+  \bibinfo{note}{accessed 18 June 2026}.
+%Type = Article
+\bibitem[{Bartholdi~III and Eisenstein(2012)}]{Bartholdi2012}
+\bibinfo{author}{Bartholdi~III, J.J.}, \bibinfo{author}{Eisenstein, D.D.},
+  \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{A self-co{\"o}rdinating bus route to resist bus
+  bunching}.
+\newblock \bibinfo{journal}{Transportation Research Part B: Methodological}
+  \bibinfo{volume}{46}, \bibinfo{pages}{481--491}.
+\newblock \DOIprefix\doi{10.1016/j.trb.2011.11.001}.
+%Type = Inproceedings
+\bibitem[{Bifet and Gavald\`{a}(2007)}]{Bifet2007}
+\bibinfo{author}{Bifet, A.}, \bibinfo{author}{Gavald\`{a}, R.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Learning from time-changing data with adaptive
+  windowing}, in: \bibinfo{booktitle}{Proceedings of the 2007 SIAM
+  International Conference on Data Mining (SDM)}, pp.
+  \bibinfo{pages}{443--448}.
+\newblock \DOIprefix\doi{10.1137/1.9781611972771.42}.
+%Type = Inproceedings
+\bibitem[{Bifet and Gavald\`{a}(2009)}]{Bifet2009}
+\bibinfo{author}{Bifet, A.}, \bibinfo{author}{Gavald\`{a}, R.},
+  \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Adaptive learning from evolving data streams}, in:
+  \bibinfo{booktitle}{Proceedings of the 8th International Symposium on
+  Intelligent Data Analysis (IDA)}, pp. \bibinfo{pages}{249--260}.
+\newblock \DOIprefix\doi{10.1007/978-3-642-03915-7_22}.
+%Type = Article
+\bibitem[{Borges~Santos et~al.(2022)Borges~Santos, S.~Pires,
+  Cassimiro~Nascimento and de~Queiroz}]{BorgesSantos2022}
+\bibinfo{author}{Borges~Santos, V.}, \bibinfo{author}{S.~Pires, C.E.},
+  \bibinfo{author}{Cassimiro~Nascimento, D.}, \bibinfo{author}{de~Queiroz,
+  A.R.M.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{A decision tree ensemble model for predicting bus
+  bunching}.
+\newblock \bibinfo{journal}{The Computer Journal} \bibinfo{volume}{65},
+  \bibinfo{pages}{2044--2062}.
+\newblock \DOIprefix\doi{10.1093/comjnl/bxab045}.
+%Type = Misc
+\bibitem[{{CapyMOA Developers}(2024)}]{CapyMOA2024}
+\bibinfo{author}{{CapyMOA Developers}}, \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{{CapyMOA}: Machine learning for data streams in
+  {Python}}.
+\newblock \bibinfo{howpublished}{\url{https://capymoa.org/}}.
+%Type = Article
+\bibitem[{Daganzo(2009)}]{Daganzo2009}
+\bibinfo{author}{Daganzo, C.F.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{A headway-based approach to eliminate bus bunching:
+  Systematic analysis and comparisons}.
+\newblock \bibinfo{journal}{Transportation Research Part B: Methodological}
+  \bibinfo{volume}{43}, \bibinfo{pages}{913--921}.
+\newblock \DOIprefix\doi{10.1016/j.trb.2009.04.002}.
+%Type = Article
+\bibitem[{Daganzo and Pilachowski(2011)}]{DaganzoPilachowski2011}
+\bibinfo{author}{Daganzo, C.F.}, \bibinfo{author}{Pilachowski, J.},
+  \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Reducing bunching with bus-to-bus cooperation}.
+\newblock \bibinfo{journal}{Transportation Research Part B: Methodological}
+  \bibinfo{volume}{45}, \bibinfo{pages}{267--277}.
+\newblock \DOIprefix\doi{10.1016/j.trb.2010.06.005}.
+%Type = Inproceedings
+\bibitem[{Domingos and Hulten(2000)}]{Domingos2000}
+\bibinfo{author}{Domingos, P.}, \bibinfo{author}{Hulten, G.},
+  \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{Mining high-speed data streams}, in:
+  \bibinfo{booktitle}{Proceedings of the 6th ACM SIGKDD International
+  Conference on Knowledge Discovery and Data Mining}, pp.
+  \bibinfo{pages}{71--80}.
+\newblock \DOIprefix\doi{10.1145/347090.347107}.
+%Type = Article
+\bibitem[{Enayatollahi et~al.(2019)Enayatollahi, Idris and
+  Amiri~Atashgah}]{Enayatollahi2019}
+\bibinfo{author}{Enayatollahi, F.}, \bibinfo{author}{Idris, A.O.},
+  \bibinfo{author}{Amiri~Atashgah, M.A.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Modelling bus bunching under variable transit demand
+  using cellular automata}.
+\newblock \bibinfo{journal}{Public Transport} \bibinfo{volume}{11},
+  \bibinfo{pages}{269--298}.
+\newblock \DOIprefix\doi{10.1007/s12469-019-00203-2}.
+%Type = Article
+\bibitem[{Ferreira et~al.(2025)Ferreira, Souza, Rios, Fernandes, Nery, Gama,
+  Bifet and Rios}]{Ferreira2025}
+\bibinfo{author}{Ferreira, M.V.}, \bibinfo{author}{Souza, M.},
+  \bibinfo{author}{Rios, T.N.}, \bibinfo{author}{Fernandes, I.F.C.},
+  \bibinfo{author}{Nery, J.}, \bibinfo{author}{Gama, J.a.},
+  \bibinfo{author}{Bifet, A.}, \bibinfo{author}{Rios, R.A.},
+  \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Salvador urban network transportation ({SUNT}): A
+  landmark spatiotemporal dataset for public transportation}.
+\newblock \bibinfo{journal}{Scientific Data} \bibinfo{volume}{12},
+  \bibinfo{pages}{1320}.
+\newblock \DOIprefix\doi{10.1038/s41597-025-05674-6}.
+%Type = Article
+\bibitem[{Gomes et~al.(2017)Gomes, Bifet, Read, Barddal, Enembreck, Pfharinger,
+  Holmes and Abdessalem}]{Gomes2017}
+\bibinfo{author}{Gomes, H.M.}, \bibinfo{author}{Bifet, A.},
+  \bibinfo{author}{Read, J.}, \bibinfo{author}{Barddal, J.P.},
+  \bibinfo{author}{Enembreck, F.}, \bibinfo{author}{Pfharinger, B.},
+  \bibinfo{author}{Holmes, G.}, \bibinfo{author}{Abdessalem, T.},
+  \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Adaptive random forests for evolving data stream
+  classification}.
+\newblock \bibinfo{journal}{Machine Learning} \bibinfo{volume}{106},
+  \bibinfo{pages}{1469--1495}.
+\newblock \DOIprefix\doi{10.1007/s10994-017-5642-8}.
+%Type = Article
+\bibitem[{Mart\'{i}nez-Estupi\~{n}an et~al.(2023)Mart\'{i}nez-Estupi\~{n}an,
+  Delgado, Mu\~{n}oz and Watkins}]{MartinezEstupinan2023}
+\bibinfo{author}{Mart\'{i}nez-Estupi\~{n}an, Y.}, \bibinfo{author}{Delgado,
+  F.}, \bibinfo{author}{Mu\~{n}oz, J.C.}, \bibinfo{author}{Watkins, K.E.},
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Improving the performance of headway control tools by
+  using individual driving speed data}.
+\newblock \bibinfo{journal}{Transportation Research Part A: Policy and
+  Practice} \bibinfo{volume}{174}, \bibinfo{pages}{103761}.
+\newblock \DOIprefix\doi{10.1016/j.tra.2023.103761}.
+%Type = Article
+\bibitem[{Moreira-Matias et~al.(2016)Moreira-Matias, Cats, Gama, Mendes-Moreira
+  and de~Sousa}]{MoreiraMatias2016}
+\bibinfo{author}{Moreira-Matias, L.}, \bibinfo{author}{Cats, O.},
+  \bibinfo{author}{Gama, J.a.}, \bibinfo{author}{Mendes-Moreira, J.a.},
+  \bibinfo{author}{de~Sousa, J.F.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{An online learning approach to eliminate bus bunching
+  in real time}.
+\newblock \bibinfo{journal}{Applied Soft Computing} \bibinfo{volume}{47},
+  \bibinfo{pages}{460--482}.
+\newblock \DOIprefix\doi{10.1016/j.asoc.2016.06.031}.
+%Type = Article
+\bibitem[{Nguyen-Phuoc et~al.(2018)Nguyen-Phuoc, Currie, De~Gruyter, Kim and
+  Young}]{NguyenPhuoc2018}
+\bibinfo{author}{Nguyen-Phuoc, D.Q.}, \bibinfo{author}{Currie, G.},
+  \bibinfo{author}{De~Gruyter, C.}, \bibinfo{author}{Kim, I.},
+  \bibinfo{author}{Young, W.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Modelling the net traffic congestion impact of bus
+  operations in {Melbourne}}.
+\newblock \bibinfo{journal}{Transportation Research Part A: Policy and
+  Practice} \bibinfo{volume}{117}, \bibinfo{pages}{1--12}.
+\newblock \DOIprefix\doi{10.1016/j.tra.2018.08.005}.
+%Type = Article
+\bibitem[{Phillips et~al.(2015)Phillips, del Rio, Mu\~{n}oz, Delgado and
+  Giesen}]{Phillips2015}
+\bibinfo{author}{Phillips, W.}, \bibinfo{author}{del Rio, A.},
+  \bibinfo{author}{Mu\~{n}oz, J.C.}, \bibinfo{author}{Delgado, F.},
+  \bibinfo{author}{Giesen, R.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Quantifying the effects of driver non-compliance and
+  communication system failure in the performance of real-time bus control
+  strategies}.
+\newblock \bibinfo{journal}{Transportation Research Part A: Policy and
+  Practice} \bibinfo{volume}{78}, \bibinfo{pages}{463--472}.
+\newblock \DOIprefix\doi{10.1016/j.tra.2015.06.005}.
+%Type = Article
+\bibitem[{Qiang and Huang(2023)}]{Qiang2023}
+\bibinfo{author}{Qiang, S.}, \bibinfo{author}{Huang, Q.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Impacts of bus holding strategies on the performance
+  of mixed traffic system}.
+\newblock \bibinfo{journal}{Physica A: Statistical Mechanics and its
+  Applications} \bibinfo{volume}{611}, \bibinfo{pages}{128455}.
+\newblock \DOIprefix\doi{10.1016/j.physa.2023.128455}.
+%Type = Misc
+\bibitem[{{TomTom International B.V.}(2025a)}]{tomtom2025salvador}
+\bibinfo{author}{{TomTom International B.V.}}, \bibinfo{year}{2025}a.
+\newblock \bibinfo{title}{Salvador traffic report}.
+\newblock \bibinfo{howpublished}{TomTom Traffic Index}.
+\newblock \URLprefix \url{https://www.tomtom.com/traffic-index/city/salvador}.
+  \bibinfo{note}{2025 traffic data; accessed 18 June 2026}.
+%Type = Misc
+\bibitem[{{TomTom International B.V.}(2025b)}]{tomtom2025ranking}
+\bibinfo{author}{{TomTom International B.V.}}, \bibinfo{year}{2025}b.
+\newblock \bibinfo{title}{Traffic index ranking 2025}.
+\newblock \bibinfo{howpublished}{TomTom Traffic Index}.
+\newblock \URLprefix \url{https://www.tomtom.com/traffic-index/ranking}.
+  \bibinfo{note}{accessed 18 June 2026}.
+%Type = Techreport
+\bibitem[{{Tribunal de Contas do Estado da
+  Bahia}(2022)}]{tcebahia2022compensacao}
+\bibinfo{author}{{Tribunal de Contas do Estado da Bahia}},
+  \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Auditoria: Compensa{\c{c}}{\~a}o Tarif{\'a}ria do
+  Sistema Metrovi{\'a}rio de Salvador e Lauro de Freitas ({SMSL})}.
+\newblock \bibinfo{type}{Technical Report} \bibinfo{number}{25}. Tribunal de
+  Contas do Estado da Bahia. \bibinfo{address}{Salvador, Brazil}.
+\newblock \URLprefix
+  \url{https://www.tce.ba.gov.br/files/com_cdspublicacaoinstitucional/publicacoes/arquivo/Sumario-2022CompTarifSistMetroviario-REVISAO-10nov2216h412022102420231045.pdf}.
+  \bibinfo{note}{accessed 18 June 2026}.
+%Type = Article
+\bibitem[{Wang et~al.(2015)Wang, Minku and Yao}]{WangMinkuYao2015}
+\bibinfo{author}{Wang, S.}, \bibinfo{author}{Minku, L.L.},
+  \bibinfo{author}{Yao, X.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Resampling-based ensemble methods for online class
+  imbalance learning}.
+\newblock \bibinfo{journal}{IEEE Transactions on Knowledge and Data
+  Engineering} \bibinfo{volume}{27}, \bibinfo{pages}{1356--1368}.
+\newblock \DOIprefix\doi{10.1109/TKDE.2014.2345380}.
+%Type = Techreport
+\bibitem[{{World Bank}(2026)}]{worldbank2026salvador}
+\bibinfo{author}{{World Bank}}, \bibinfo{year}{2026}.
+\newblock \bibinfo{title}{Brazil Electromobility Multiphase Programmatic
+  Approach---{MPA} Phase 2 Salvador ({P507029})}.
+\newblock \bibinfo{type}{Project Information Document, Appraisal Stage}
+  \bibinfo{number}{PIDIA01274}. World Bank. \bibinfo{address}{Washington, DC}.
+\newblock \URLprefix
+  \url{https://documents1.worldbank.org/curated/en/099021026100037052/pdf/P507029-8e092aac-8da9-4b2e-8d67-bc039993244e.pdf}.
+  \bibinfo{note}{prepared or updated 10 February 2026; accessed 18 June 2026}.
+%Type = Article
+\bibitem[{Yu et~al.(2016)Yu, Chen, Wu, Ma and Wang}]{Yu2016}
+\bibinfo{author}{Yu, H.}, \bibinfo{author}{Chen, D.}, \bibinfo{author}{Wu, Z.},
+  \bibinfo{author}{Ma, X.}, \bibinfo{author}{Wang, Y.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Headway-based bus bunching prediction using transit
+  smart card data}.
+\newblock \bibinfo{journal}{Transportation Research Part C: Emerging
+  Technologies} \bibinfo{volume}{72}, \bibinfo{pages}{45--59}.
+\newblock \DOIprefix\doi{10.1016/j.trc.2016.09.007}.
+
+\end{thebibliography}
