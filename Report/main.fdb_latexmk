@@ -1,14 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1781750673.11181 "main.aux" "main.bbl" "main" 1781750674.52688 0
+["bibtex main"] 1782128898.1297 "main.aux" "main.bbl" "main" 1782128899.55604 0
   "./references.bib" 1781746448.34635 9721 590f9f8073f39fa7bc756a933b7011f1 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1741388039 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1781750674.34779 28846 378a64ca55c0d2fa22e85c71342e684f "pdflatex"
+  "main.aux" 1782128899.34075 28942 3565738566673e3e879e8e81825418dc "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781750673.15704 "/Users/ademartutor/Documents/UoW/Trimester A - 2026/COMPX523 - Machine Learning for Data Streams/Assignment 3/anti-bus-bunching/Report/main.tex" "main.pdf" "main" 1781750674.52701 0
-  "/Users/ademartutor/Documents/UoW/Trimester A - 2026/COMPX523 - Machine Learning for Data Streams/Assignment 3/anti-bus-bunching/Report/main.tex" 1781750305.32317 75913 0a298784f28dc28eb5a8a819de5ff5ee ""
+["pdflatex"] 1782128898.17673 "main.tex" "main.pdf" "main" 1782128899.55618 0
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1741388039 2375 baa924870cfb487815765f9094cf3728 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1741388039 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1741388039 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -273,10 +272,10 @@
   "figures/severity_timeseries_after.png" 1781746448.35489 65845 63f6390e254c8a086e30dd129d97fc7c ""
   "figures/string_diagram.png" 1781746448.35703 155992 f41b5f95b906b69892a71d4fc4b8b21f ""
   "figures/string_diagram_after.png" 1781746448.35648 157426 15d625a3617168fd2a01e2feb7704a53 ""
-  "main.aux" 1781750674.34779 28846 378a64ca55c0d2fa22e85c71342e684f "pdflatex"
-  "main.bbl" 1781750673.15438 9483 65b94ae2973acf969d4f3f86b20417e0 "bibtex main"
-  "main.out" 1781750674.34937 6712 f2922295296771cada76a37ee54eefd3 "pdflatex"
-  "main.tex" 1781750305.32317 75913 0a298784f28dc28eb5a8a819de5ff5ee ""
+  "main.aux" 1782128899.34075 28942 3565738566673e3e879e8e81825418dc "pdflatex"
+  "main.bbl" 1782128898.17377 9581 fb11a1b46b54480e5ca3fb9a0ccfa37b "bibtex main"
+  "main.out" 1782128899.35262 6712 f2922295296771cada76a37ee54eefd3 "pdflatex"
+  "main.tex" 1782128883.44196 75343 4b53d85b6dad9e52f067fb657ed886f0 ""
   (generated)
   "main.aux"
   "main.log"

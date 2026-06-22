@@ -7,39 +7,51 @@
 
 \bibitem[Aguiar et~al.(2024)Aguiar, Krawczyk, and Cano]{Aguiar2024}
 Gabriel Aguiar, Bartosz Krawczyk, and Alberto Cano.
-\newblock A survey on learning from imbalanced data streams: taxonomy, challenges, empirical study, and reproducible experimental framework.
+\newblock A survey on learning from imbalanced data streams: taxonomy,
+  challenges, empirical study, and reproducible experimental framework.
 \newblock \emph{Machine Learning}, 113\penalty0 (7):\penalty0 4165--4243, 2024.
 \newblock \doi{10.1007/s10994-023-06353-6}.
 
-\bibitem[{Banco Nacional de Desenvolvimento Econ{\^o}mico e Social (BNDES)} and {Minist{\'e}rio das Cidades}(2025)]{bndes2025salvador}
-{Banco Nacional de Desenvolvimento Econ{\^o}mico e Social (BNDES)} and {Minist{\'e}rio das Cidades}.
-\newblock Relat{\'o}rio de diagn{\'o}stico: Regi{\~a}o metropolitana de salvador.
-\newblock Relat{\'o}rio de Diagn{\'o}stico Volume 4, Estudo Nacional de Mobilidade Urbana, February 2025.
-\newblock URL \url{https://www.bndes.gov.br/arquivos/fep-mobilidade-urbana/relatorios-diagnostico/relatorio-Salvador-vol-4.pdf}.
+\bibitem[{Banco Nacional de Desenvolvimento Econ{\^o}mico e Social (BNDES)} and
+  {Minist{\'e}rio das Cidades}(2025)]{bndes2025salvador}
+{Banco Nacional de Desenvolvimento Econ{\^o}mico e Social (BNDES)} and
+  {Minist{\'e}rio das Cidades}.
+\newblock Relat{\'o}rio de diagn{\'o}stico: Regi{\~a}o metropolitana de
+  salvador.
+\newblock Relat{\'o}rio de Diagn{\'o}stico Volume 4, Estudo Nacional de
+  Mobilidade Urbana, February 2025.
+\newblock URL
+  \url{https://www.bndes.gov.br/arquivos/fep-mobilidade-urbana/relatorios-diagnostico/relatorio-Salvador-vol-4.pdf}.
 \newblock Accessed 18 June 2026.
 
 \bibitem[Bartholdi~III and Eisenstein(2012)]{Bartholdi2012}
 John~J. Bartholdi~III and Donald~D. Eisenstein.
 \newblock A self-co{\"o}rdinating bus route to resist bus bunching.
-\newblock \emph{Transportation Research Part B: Methodological}, 46\penalty0 (4):\penalty0 481--491, 2012.
+\newblock \emph{Transportation Research Part B: Methodological}, 46\penalty0
+  (4):\penalty0 481--491, 2012.
 \newblock \doi{10.1016/j.trb.2011.11.001}.
 
 \bibitem[Bifet and Gavald\`{a}(2007)]{Bifet2007}
 Albert Bifet and Ricard Gavald\`{a}.
 \newblock Learning from time-changing data with adaptive windowing.
-\newblock In \emph{Proceedings of the 2007 SIAM International Conference on Data Mining (SDM)}, pages 443--448, 2007.
+\newblock In \emph{Proceedings of the 2007 SIAM International Conference on
+  Data Mining (SDM)}, pages 443--448, 2007.
 \newblock \doi{10.1137/1.9781611972771.42}.
 
 \bibitem[Bifet and Gavald\`{a}(2009)]{Bifet2009}
 Albert Bifet and Ricard Gavald\`{a}.
 \newblock Adaptive learning from evolving data streams.
-\newblock In \emph{Proceedings of the 8th International Symposium on Intelligent Data Analysis (IDA)}, pages 249--260, 2009.
+\newblock In \emph{Proceedings of the 8th International Symposium on
+  Intelligent Data Analysis (IDA)}, pages 249--260, 2009.
 \newblock \doi{10.1007/978-3-642-03915-7_22}.
 
-\bibitem[Borges~Santos et~al.(2022)Borges~Santos, S.~Pires, Cassimiro~Nascimento, and de~Queiroz]{BorgesSantos2022}
-Veruska Borges~Santos, Carlos~Eduardo S.~Pires, Dimas Cassimiro~Nascimento, and Andreza Raquel~M. de~Queiroz.
+\bibitem[Borges~Santos et~al.(2022)Borges~Santos, S.~Pires,
+  Cassimiro~Nascimento, and de~Queiroz]{BorgesSantos2022}
+Veruska Borges~Santos, Carlos~Eduardo S.~Pires, Dimas Cassimiro~Nascimento, and
+  Andreza Raquel~M. de~Queiroz.
 \newblock A decision tree ensemble model for predicting bus bunching.
-\newblock \emph{The Computer Journal}, 65\penalty0 (8):\penalty0 2044--2062, 2022.
+\newblock \emph{The Computer Journal}, 65\penalty0 (8):\penalty0 2044--2062,
+  2022.
 \newblock \doi{10.1093/comjnl/bxab045}.
 
 \bibitem[{CapyMOA Developers}(2024)]{CapyMOA2024}
@@ -49,68 +61,95 @@ Veruska Borges~Santos, Carlos~Eduardo S.~Pires, Dimas Cassimiro~Nascimento, and 
 
 \bibitem[Daganzo(2009)]{Daganzo2009}
 Carlos~F. Daganzo.
-\newblock A headway-based approach to eliminate bus bunching: Systematic analysis and comparisons.
-\newblock \emph{Transportation Research Part B: Methodological}, 43\penalty0 (10):\penalty0 913--921, 2009.
+\newblock A headway-based approach to eliminate bus bunching: Systematic
+  analysis and comparisons.
+\newblock \emph{Transportation Research Part B: Methodological}, 43\penalty0
+  (10):\penalty0 913--921, 2009.
 \newblock \doi{10.1016/j.trb.2009.04.002}.
 
 \bibitem[Daganzo and Pilachowski(2011)]{DaganzoPilachowski2011}
 Carlos~F. Daganzo and Josh Pilachowski.
 \newblock Reducing bunching with bus-to-bus cooperation.
-\newblock \emph{Transportation Research Part B: Methodological}, 45\penalty0 (1):\penalty0 267--277, 2011.
+\newblock \emph{Transportation Research Part B: Methodological}, 45\penalty0
+  (1):\penalty0 267--277, 2011.
 \newblock \doi{10.1016/j.trb.2010.06.005}.
 
 \bibitem[Domingos and Hulten(2000)]{Domingos2000}
 Pedro Domingos and Geoff Hulten.
 \newblock Mining high-speed data streams.
-\newblock In \emph{Proceedings of the 6th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining}, pages 71--80, 2000.
+\newblock In \emph{Proceedings of the 6th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pages 71--80, 2000.
 \newblock \doi{10.1145/347090.347107}.
 
-\bibitem[Enayatollahi et~al.(2019)Enayatollahi, Idris, and Amiri~Atashgah]{Enayatollahi2019}
+\bibitem[Enayatollahi et~al.(2019)Enayatollahi, Idris, and
+  Amiri~Atashgah]{Enayatollahi2019}
 Fatemeh Enayatollahi, Ahmed~Osman Idris, and M.~A. Amiri~Atashgah.
-\newblock Modelling bus bunching under variable transit demand using cellular automata.
+\newblock Modelling bus bunching under variable transit demand using cellular
+  automata.
 \newblock \emph{Public Transport}, 11\penalty0 (2):\penalty0 269--298, 2019.
 \newblock \doi{10.1007/s12469-019-00203-2}.
 
-\bibitem[Ferreira et~al.(2025)Ferreira, Souza, Rios, Fernandes, Nery, Gama, Bifet, and Rios]{Ferreira2025}
-Marcos~V. Ferreira, Matheus Souza, Tatiane~N. Rios, Islame F.~C. Fernandes, Jorge Nery, Jo\~{a}o Gama, Albert Bifet, and Ricardo~A. Rios.
-\newblock Salvador urban network transportation ({SUNT}): A landmark spatiotemporal dataset for public transportation.
+\bibitem[Ferreira et~al.(2025)Ferreira, Souza, Rios, Fernandes, Nery, Gama,
+  Bifet, and Rios]{Ferreira2025}
+Marcos~V. Ferreira, Matheus Souza, Tatiane~N. Rios, Islame F.~C. Fernandes,
+  Jorge Nery, Jo\~{a}o Gama, Albert Bifet, and Ricardo~A. Rios.
+\newblock Salvador urban network transportation ({SUNT}): A landmark
+  spatiotemporal dataset for public transportation.
 \newblock \emph{Scientific Data}, 12\penalty0 (1):\penalty0 1320, 2025.
 \newblock \doi{10.1038/s41597-025-05674-6}.
 
-\bibitem[Gomes et~al.(2017)Gomes, Bifet, Read, Barddal, Enembreck, Pfharinger, Holmes, and Abdessalem]{Gomes2017}
-Heitor~M. Gomes, Albert Bifet, Jesse Read, Jean~Paul Barddal, Fabr\'{i}cio Enembreck, Bernhard Pfharinger, Geoff Holmes, and Talel Abdessalem.
+\bibitem[Gomes et~al.(2017)Gomes, Bifet, Read, Barddal, Enembreck, Pfharinger,
+  Holmes, and Abdessalem]{Gomes2017}
+Heitor~M. Gomes, Albert Bifet, Jesse Read, Jean~Paul Barddal, Fabr\'{i}cio
+  Enembreck, Bernhard Pfharinger, Geoff Holmes, and Talel Abdessalem.
 \newblock Adaptive random forests for evolving data stream classification.
 \newblock \emph{Machine Learning}, 106\penalty0 (9):\penalty0 1469--1495, 2017.
 \newblock \doi{10.1007/s10994-017-5642-8}.
 
-\bibitem[Mart\'{i}nez-Estupi\~{n}an et~al.(2023)Mart\'{i}nez-Estupi\~{n}an, Delgado, Mu\~{n}oz, and Watkins]{MartinezEstupinan2023}
-Yerly Mart\'{i}nez-Estupi\~{n}an, Felipe Delgado, Juan~Carlos Mu\~{n}oz, and Kari~E. Watkins.
-\newblock Improving the performance of headway control tools by using individual driving speed data.
-\newblock \emph{Transportation Research Part A: Policy and Practice}, 174:\penalty0 103761, 2023.
+\bibitem[Mart\'{i}nez-Estupi\~{n}an et~al.(2023)Mart\'{i}nez-Estupi\~{n}an,
+  Delgado, Mu\~{n}oz, and Watkins]{MartinezEstupinan2023}
+Yerly Mart\'{i}nez-Estupi\~{n}an, Felipe Delgado, Juan~Carlos Mu\~{n}oz, and
+  Kari~E. Watkins.
+\newblock Improving the performance of headway control tools by using
+  individual driving speed data.
+\newblock \emph{Transportation Research Part A: Policy and Practice},
+  174:\penalty0 103761, 2023.
 \newblock \doi{10.1016/j.tra.2023.103761}.
 
-\bibitem[Moreira-Matias et~al.(2016)Moreira-Matias, Cats, Gama, Mendes-Moreira, and de~Sousa]{MoreiraMatias2016}
-Lu\'{i}s Moreira-Matias, Oded Cats, Jo\~{a}o Gama, Jo\~{a}o Mendes-Moreira, and Jorge~Freire de~Sousa.
+\bibitem[Moreira-Matias et~al.(2016)Moreira-Matias, Cats, Gama, Mendes-Moreira,
+  and de~Sousa]{MoreiraMatias2016}
+Lu\'{i}s Moreira-Matias, Oded Cats, Jo\~{a}o Gama, Jo\~{a}o Mendes-Moreira, and
+  Jorge~Freire de~Sousa.
 \newblock An online learning approach to eliminate bus bunching in real time.
 \newblock \emph{Applied Soft Computing}, 47:\penalty0 460--482, 2016.
 \newblock \doi{10.1016/j.asoc.2016.06.031}.
 
-\bibitem[Nguyen-Phuoc et~al.(2018)Nguyen-Phuoc, Currie, De~Gruyter, Kim, and Young]{NguyenPhuoc2018}
-Duy~Q. Nguyen-Phuoc, Graham Currie, Chris De~Gruyter, Inhi Kim, and William Young.
-\newblock Modelling the net traffic congestion impact of bus operations in {Melbourne}.
-\newblock \emph{Transportation Research Part A: Policy and Practice}, 117:\penalty0 1--12, 2018.
+\bibitem[Nguyen-Phuoc et~al.(2018)Nguyen-Phuoc, Currie, De~Gruyter, Kim, and
+  Young]{NguyenPhuoc2018}
+Duy~Q. Nguyen-Phuoc, Graham Currie, Chris De~Gruyter, Inhi Kim, and William
+  Young.
+\newblock Modelling the net traffic congestion impact of bus operations in
+  {Melbourne}.
+\newblock \emph{Transportation Research Part A: Policy and Practice},
+  117:\penalty0 1--12, 2018.
 \newblock \doi{10.1016/j.tra.2018.08.005}.
 
-\bibitem[Phillips et~al.(2015)Phillips, del Rio, Mu\~{n}oz, Delgado, and Giesen]{Phillips2015}
-William Phillips, Andr\'{e}s del Rio, Juan~Carlos Mu\~{n}oz, Felipe Delgado, and Ricardo Giesen.
-\newblock Quantifying the effects of driver non-compliance and communication system failure in the performance of real-time bus control strategies.
-\newblock \emph{Transportation Research Part A: Policy and Practice}, 78:\penalty0 463--472, 2015.
+\bibitem[Phillips et~al.(2015)Phillips, del Rio, Mu\~{n}oz, Delgado, and
+  Giesen]{Phillips2015}
+William Phillips, Andr\'{e}s del Rio, Juan~Carlos Mu\~{n}oz, Felipe Delgado,
+  and Ricardo Giesen.
+\newblock Quantifying the effects of driver non-compliance and communication
+  system failure in the performance of real-time bus control strategies.
+\newblock \emph{Transportation Research Part A: Policy and Practice},
+  78:\penalty0 463--472, 2015.
 \newblock \doi{10.1016/j.tra.2015.06.005}.
 
 \bibitem[Qiang and Huang(2023)]{Qiang2023}
 Shengjie Qiang and Qingxia Huang.
-\newblock Impacts of bus holding strategies on the performance of mixed traffic system.
-\newblock \emph{Physica A: Statistical Mechanics and its Applications}, 611:\penalty0 128455, 2023.
+\newblock Impacts of bus holding strategies on the performance of mixed traffic
+  system.
+\newblock \emph{Physica A: Statistical Mechanics and its Applications},
+  611:\penalty0 128455, 2023.
 \newblock \doi{10.1016/j.physa.2023.128455}.
 
 \bibitem[{TomTom International B.V.}(2025{\natexlab{a}})]{tomtom2025ranking}
@@ -127,30 +166,40 @@ Shengjie Qiang and Qingxia Huang.
 \newblock URL \url{https://www.tomtom.com/traffic-index/city/salvador}.
 \newblock 2025 traffic data; accessed 18 June 2026.
 
-\bibitem[{Tribunal de Contas do Estado da Bahia}(2022)]{tcebahia2022compensacao}
+\bibitem[{Tribunal de Contas do Estado da
+  Bahia}(2022)]{tcebahia2022compensacao}
 {Tribunal de Contas do Estado da Bahia}.
-\newblock Auditoria: Compensa{\c{c}}{\~a}o tarif{\'a}ria do sistema metrovi{\'a}rio de salvador e lauro de freitas ({SMSL}).
-\newblock Technical Report~25, Tribunal de Contas do Estado da Bahia, Salvador, Brazil, 2022.
-\newblock URL \url{https://www.tce.ba.gov.br/files/com_cdspublicacaoinstitucional/publicacoes/arquivo/Sumario-2022CompTarifSistMetroviario-REVISAO-10nov2216h412022102420231045.pdf}.
+\newblock Auditoria: Compensa{\c{c}}{\~a}o tarif{\'a}ria do sistema
+  metrovi{\'a}rio de salvador e lauro de freitas ({SMSL}).
+\newblock Technical Report~25, Tribunal de Contas do Estado da Bahia, Salvador,
+  Brazil, 2022.
+\newblock URL
+  \url{https://www.tce.ba.gov.br/files/com_cdspublicacaoinstitucional/publicacoes/arquivo/Sumario-2022CompTarifSistMetroviario-REVISAO-10nov2216h412022102420231045.pdf}.
 \newblock Accessed 18 June 2026.
 
 \bibitem[Wang et~al.(2015)Wang, Minku, and Yao]{WangMinkuYao2015}
 Shuo Wang, Leandro~L. Minku, and Xin Yao.
-\newblock Resampling-based ensemble methods for online class imbalance learning.
-\newblock \emph{IEEE Transactions on Knowledge and Data Engineering}, 27\penalty0 (5):\penalty0 1356--1368, 2015.
+\newblock Resampling-based ensemble methods for online class imbalance
+  learning.
+\newblock \emph{IEEE Transactions on Knowledge and Data Engineering},
+  27\penalty0 (5):\penalty0 1356--1368, 2015.
 \newblock \doi{10.1109/TKDE.2014.2345380}.
 
 \bibitem[{World Bank}(2026)]{worldbank2026salvador}
 {World Bank}.
-\newblock Brazil electromobility multiphase programmatic approach---{MPA} phase 2 salvador ({P507029}).
-\newblock Project Information Document, Appraisal Stage PIDIA01274, World Bank, Washington, DC, February 2026.
-\newblock URL \url{https://documents1.worldbank.org/curated/en/099021026100037052/pdf/P507029-8e092aac-8da9-4b2e-8d67-bc039993244e.pdf}.
+\newblock Brazil electromobility multiphase programmatic approach---{MPA} phase
+  2 salvador ({P507029}).
+\newblock Project Information Document, Appraisal Stage PIDIA01274, World Bank,
+  Washington, DC, February 2026.
+\newblock URL
+  \url{https://documents1.worldbank.org/curated/en/099021026100037052/pdf/P507029-8e092aac-8da9-4b2e-8d67-bc039993244e.pdf}.
 \newblock Prepared or updated 10 February 2026; accessed 18 June 2026.
 
 \bibitem[Yu et~al.(2016)Yu, Chen, Wu, Ma, and Wang]{Yu2016}
 Haiyang Yu, Dongwei Chen, Zhihai Wu, Xiaolei Ma, and Yunpeng Wang.
 \newblock Headway-based bus bunching prediction using transit smart card data.
-\newblock \emph{Transportation Research Part C: Emerging Technologies}, 72:\penalty0 45--59, 2016.
+\newblock \emph{Transportation Research Part C: Emerging Technologies},
+  72:\penalty0 45--59, 2016.
 \newblock \doi{10.1016/j.trc.2016.09.007}.
 
 \end{thebibliography}
