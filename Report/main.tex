@@ -60,7 +60,7 @@
 % ---------- Title metadata ----------
 \title{An Online Anti-Bunching Copilot for Bus Drivers:\\
 Streaming Headway-Risk Prediction on the SUNT Dataset}
-\author{Ademar Tutor, Member~2, Member~3, Member~4, Member~5, Member~6 \\
+\author{Ademar Tutor, Zaimei Xing, Member~3, Member~4, Member~5, Member~6 \\
 \small Department of Computer Science, University of Waikato, Hamilton, New Zealand \\
 \small COMPX523-26A: Machine Learning for Data Streams}
 \date{}
@@ -567,7 +567,7 @@ Load the OD parquet files for the dates; keep the scoped routes and directions; 
   \uElseIf{$h_{\min} < \beta\, m$}{$y \leftarrow$ \emph{warning}}
   \lElse{$y \leftarrow$ \emph{ok}}
 }
-Engineer the causal features of Table~\ref{tab:feat} (all $\le t$): headway ratio, trend, boarding pressure, time-of-day\;
+Engineer the causal features of Table~\ref{tab:feat} (all $\le t$): headway ratio, trend\;
 Drop arrivals with no defined headway, normal, or label; replace any non-finite values\;
 Sort the surviving rows by \texttt{stop\_time}\;
 \caption{Constructing the streaming dataset from SUNT OD.}
@@ -624,11 +624,7 @@ Column & Role & Meaning (plain English) \\
 \texttt{headway\_ratio}        & feature & \texttt{headway\_min} $\div$ normal. Below~1 = closer than usual (bunching). \\
 \texttt{headway\_trend}        & feature & Change in the gap versus the previous bus at this stop (closing or opening). \\
 \texttt{since\_prev\_stop\_min}& feature & Minutes this bus took to get here from its previous stop (running-time proxy). \\
-\texttt{loading}               & feature & Passengers on board (crowding proxy). \\
-\texttt{recent\_boardings}     & feature & Boardings over this and the last 2 stops (demand pressure). \\
 \texttt{pt\_sequence}          & feature & Position along the route. \\
-\texttt{minute\_of\_day}       & feature & Time of day in minutes since midnight. \\
-\texttt{dow}                   & feature & Day of week (0 = Monday). \\
 \texttt{is\_peak}              & feature & 1 during the commute peaks (06--08h, 17--19h), else 0. \\
 \texttt{label}                 & target  & \{0 ok, 1 warning, 2 bunching\}: is the gap about to collapse below 60\%/40\% of normal within the next 3 stops? \\
 \bottomrule
@@ -645,28 +641,28 @@ Table~\ref{tab:odsample} is the raw input, this is what the model sees after pre
 (Table~\ref{tab:feat} defines each column). Abbreviations: \texttt{seq}~=~pt\_sequence,
 \texttt{headway}~=~headway\_min, \texttt{normal}~=~local\_median\_headway,
 \texttt{ratio}~=~headway\_ratio, \texttt{trend}~=~headway\_trend,
-\texttt{since\_prev}~=~since\_prev\_stop\_min, \texttt{recent\_b}~=~recent\_boardings,
-\texttt{min\_day}~=~minute\_of\_day, \texttt{peak}~=~is\_peak. Note how the raw \texttt{stop\_time}
-of Table~\ref{tab:odsample} turns into \texttt{min\_day} (802 = 13:22) and the per-stop gaps into
-\texttt{since\_prev}; the load appears at \texttt{seq}~8 just as in the raw rows; and a bunched
+\texttt{since\_prev}~=~since\_prev\_stop\_min,
+\texttt{peak}~=~is\_peak. Note how the raw \texttt{stop\_time}
+of Table~\ref{tab:odsample} turns into the per-stop gaps and into
+\texttt{since\_prev}; and a bunched
 \texttt{ratio} ($\approx$0.4) yields warning (1) or bunching (2) labels. The shaded row
 (\texttt{seq}~8) is the one traced in the worked example.}
 \label{tab:featsample}
-\begin{tabular}{rrrrrrrrrrrr}
+\begin{tabular}{rrrrrrrrr}
 \toprule
-seq & headway & normal & ratio & trend & since\_prev & load & recent\_b & min\_day & dow & peak & label \\
+seq & headway & normal & ratio & trend & since\_prev & min\_day & peak & label \\
 \midrule
-1  & 18.07 & 37.00 & 0.49 & -11.88 & 0.00 & 0.00 & 0.00 & 802 & 4 & 0 & 1 \\
-2  & 18.13 & 37.14 & 0.49 & -12.08 & 0.33 & 0.00 & 0.00 & 802 & 4 & 0 & 1 \\
-3  & 16.87 & 38.92 & 0.43 & -17.93 & 3.33 & 0.00 & 0.00 & 805 & 4 & 0 & 1 \\
-4  & 16.75 & 39.02 & 0.43 & -19.32 & 1.17 & 0.00 & 0.00 & 806 & 4 & 0 & 1 \\
-5  & 16.25 & 39.36 & 0.41 & -21.30 & 1.00 & 0.00 & 0.00 & 807 & 4 & 0 & 1 \\
-6  & 16.22 & 40.14 & 0.40 & -22.53 & 1.18 & 0.00 & 0.00 & 809 & 4 & 0 & 2 \\
-7  & 15.75 & 40.48 & 0.39 & -23.80 & 0.35 & 0.00 & 0.00 & 809 & 4 & 0 & 2 \\
-\rowcolor{gray!15} 8  & 15.82 & 39.43 & 0.40 & -22.55 & 1.00 & 2.26 & 2.26 & 810 & 4 & 0 & 1 \\
-9  & 16.35 & 38.34 & 0.43 & -21.42 & 1.87 & 2.26 & 2.26 & 812 & 4 & 0 & 1 \\
-10 & 16.33 & 38.38 & 0.43 & -21.47 & 0.35 & 2.26 & 2.26 & 812 & 4 & 0 & 1 \\
-11 & 16.35 & 34.40 & 0.48 & -10.13 & 0.80 & 3.39 & 1.13 & 813 & 4 & 0 & 1 \\
+1  & 18.07 & 37.00 & 0.49 & -11.88 & 0.00 & 4 & 0 & 1 \\
+2  & 18.13 & 37.14 & 0.49 & -12.08 & 0.33 & 4 & 0 & 1 \\
+3  & 16.87 & 38.92 & 0.43 & -17.93 & 3.33 & 4 & 0 & 1 \\
+4  & 16.75 & 39.02 & 0.43 & -19.32 & 1.17 & 4 & 0 & 1 \\
+5  & 16.25 & 39.36 & 0.41 & -21.30 & 1.00 & 4 & 0 & 1 \\
+6  & 16.22 & 40.14 & 0.40 & -22.53 & 1.18 & 4 & 0 & 2 \\
+7  & 15.75 & 40.48 & 0.39 & -23.80 & 0.35 & 4 & 0 & 2 \\
+\rowcolor{gray!15} 8  & 15.82 & 39.43 & 0.40 & -22.55 & 1.00 & 4 & 0 & 1 \\
+9  & 16.35 & 38.34 & 0.43 & -21.42 & 1.87 & 4 & 0 & 1 \\
+10 & 16.33 & 38.38 & 0.43 & -21.47 & 0.35 & 4 & 0 & 1 \\
+11 & 16.35 & 34.40 & 0.48 & -10.13 & 0.80 & 4 & 0 & 1 \\
 \bottomrule
 \end{tabular}
 \end{table}

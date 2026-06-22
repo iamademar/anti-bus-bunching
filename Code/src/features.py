@@ -19,6 +19,7 @@ import pandas as pd
 LABELS = {0: "ok", 1: "warning", 2: "bunching"}
 
 # Causal feature columns the models consume (all known at <= t).
+'''
 FEATURE_COLS = [
     "headway_min",            # current forward headway
     "headway_ratio",          # current headway / local normal
@@ -31,7 +32,23 @@ FEATURE_COLS = [
     "dow",                    # day of week
     "is_peak",
 ]
+'''
+FEATURE_COLS = [
+    "headway_min",            # current forward headway
+    "headway_ratio",          # current headway / local normal
+    "headway_trend",          # change vs previous arrival's headway at this stop
+    "since_prev_stop_min",    # running time from previous stop
+    "pt_sequence",            # position along the route
+    "is_peak",
+]
 
+FEATURE_TRAIN = [
+    "headway_min",            # current forward headway
+    "headway_ratio",          # current headway / local normal
+    "headway_trend",          # change vs previous arrival's headway at this stop
+    "since_prev_stop_min",    # running time from previous stop
+    "pt_sequence",
+]
 
 def _time_feats(df: pd.DataFrame) -> pd.DataFrame:
     t = df["stop_time"].dt
