@@ -70,23 +70,23 @@
 \newlabel{sec:build-stream}{{3.5}{9}{How the algorithm builds the stream}{subsection.3.5}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Engineered columns in \texttt  {features.csv}. ``Causal'' columns use only the past ($\le $ now); the \texttt  {label} looks into the future and is the prediction target, never an input.}}{10}{table.caption.9}\protected@file@percent }
 \newlabel{tab:feat}{{5}{10}{Engineered columns in \texttt {features.csv}. ``Causal'' columns use only the past ($\le $ now); the \texttt {label} looks into the future and is the prediction target, never an input}{table.caption.9}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces The engineered \texttt  {features.csv} rows computed from the \emph  {same} eleven raw OD rows of Table~\ref {tab:odsample} (trip 20407\_1007\_2). Read the two tables together: Table~\ref {tab:odsample} is the raw input, this is what the model sees after preprocessing (Table~\ref {tab:feat} defines each column). Abbreviations: \texttt  {seq}~=~pt\_sequence, \texttt  {headway}~=~headway\_min, \texttt  {normal}~=~local\_median\_headway, \texttt  {ratio}~=~headway\_ratio, \texttt  {trend}~=~headway\_trend, \texttt  {since\_prev}~=~since\_prev\_stop\_min, \texttt  {recent\_b}~=~recent\_boardings, \texttt  {min\_day}~=~minute\_of\_day, \texttt  {peak}~=~is\_peak. Note how the raw \texttt  {stop\_time} of Table~\ref {tab:odsample} turns into \texttt  {min\_day} (802 = 13:22) and the per-stop gaps into \texttt  {since\_prev}; the load appears at \texttt  {seq}~8 just as in the raw rows; and a bunched \texttt  {ratio} ($\approx $0.4) yields warning (1) or bunching (2) labels. The shaded row (\texttt  {seq}~8) is the one traced in the worked example.}}{10}{table.caption.10}\protected@file@percent }
-\newlabel{tab:featsample}{{6}{10}{The engineered \texttt {features.csv} rows computed from the \emph {same} eleven raw OD rows of Table~\ref {tab:odsample} (trip 20407\_1007\_2). Read the two tables together: Table~\ref {tab:odsample} is the raw input, this is what the model sees after preprocessing (Table~\ref {tab:feat} defines each column). Abbreviations: \texttt {seq}~=~pt\_sequence, \texttt {headway}~=~headway\_min, \texttt {normal}~=~local\_median\_headway, \texttt {ratio}~=~headway\_ratio, \texttt {trend}~=~headway\_trend, \texttt {since\_prev}~=~since\_prev\_stop\_min, \texttt {recent\_b}~=~recent\_boardings, \texttt {min\_day}~=~minute\_of\_day, \texttt {peak}~=~is\_peak. Note how the raw \texttt {stop\_time} of Table~\ref {tab:odsample} turns into \texttt {min\_day} (802 = 13:22) and the per-stop gaps into \texttt {since\_prev}; the load appears at \texttt {seq}~8 just as in the raw rows; and a bunched \texttt {ratio} ($\approx $0.4) yields warning (1) or bunching (2) labels. The shaded row (\texttt {seq}~8) is the one traced in the worked example}{table.caption.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces The engineered \texttt  {features.csv} rows computed from the \emph  {same} eleven raw OD rows of Table~\ref {tab:odsample} (trip 20407\_1007\_2). Read the two tables together: Table~\ref {tab:odsample} is the raw input, this is what the model sees after preprocessing (Table~\ref {tab:feat} defines each column). Abbreviations: \texttt  {seq}~=~pt\_sequence, \texttt  {headway}~=~headway\_min, \texttt  {normal}~=~local\_median\_headway, \texttt  {ratio}~=~headway\_ratio, \texttt  {trend}~=~headway\_trend, \texttt  {since\_prev}~=~since\_prev\_stop\_min, \texttt  {peak}~=~is\_peak. Note how the raw \texttt  {stop\_time} of Table~\ref {tab:odsample} turns into the per-stop gaps and into \texttt  {since\_prev}; and a bunched \texttt  {ratio} ($\approx $0.4) yields warning (1) or bunching (2) labels. The shaded row (\texttt  {seq}~8) is the one traced in the worked example.}}{10}{table.caption.10}\protected@file@percent }
+\newlabel{tab:featsample}{{6}{10}{The engineered \texttt {features.csv} rows computed from the \emph {same} eleven raw OD rows of Table~\ref {tab:odsample} (trip 20407\_1007\_2). Read the two tables together: Table~\ref {tab:odsample} is the raw input, this is what the model sees after preprocessing (Table~\ref {tab:feat} defines each column). Abbreviations: \texttt {seq}~=~pt\_sequence, \texttt {headway}~=~headway\_min, \texttt {normal}~=~local\_median\_headway, \texttt {ratio}~=~headway\_ratio, \texttt {trend}~=~headway\_trend, \texttt {since\_prev}~=~since\_prev\_stop\_min, \texttt {peak}~=~is\_peak. Note how the raw \texttt {stop\_time} of Table~\ref {tab:odsample} turns into the per-stop gaps and into \texttt {since\_prev}; and a bunched \texttt {ratio} ($\approx $0.4) yields warning (1) or bunching (2) labels. The shaded row (\texttt {seq}~8) is the one traced in the worked example}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Counterfactual simulation design}{10}{subsection.3.6}\protected@file@percent }
+\newlabel{sec:simdesign}{{3.6}{10}{Counterfactual simulation design}{subsection.3.6}{}}
 \citation{Daganzo2009}
 \citation{DaganzoPilachowski2011}
 \citation{Enayatollahi2019}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Preprocessing pipeline from the raw SUNT OD data to the modelling table. Each stage is a function in the submitted code; the output is replayed chronologically for prequential evaluation.}}{11}{figure.caption.11}\protected@file@percent }
 \newlabel{fig:pipeline}{{4}{11}{Preprocessing pipeline from the raw SUNT OD data to the modelling table. Each stage is a function in the submitted code; the output is replayed chronologically for prequential evaluation}{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Counterfactual simulation design}{11}{subsection.3.6}\protected@file@percent }
-\newlabel{sec:simdesign}{{3.6}{11}{Counterfactual simulation design}{subsection.3.6}{}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Counterfactual ease-off replay (simulation).}}{11}{algocf.2}\protected@file@percent }
 \newlabel{alg:counterfactual}{{2}{11}{Counterfactual simulation design}{algocf.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{11}{section.4}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{11}{Experiments}{section.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Setup}{11}{section*.12}\protected@file@percent }
 \citation{Aguiar2024}
 \@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Prequential model bake-off (bunching class), 109{,}029 instances. Ranked by F1. The static threshold is a non-learning reference.}}{12}{table.caption.16}\protected@file@percent }
 \newlabel{tab:bakeoff}{{7}{12}{Prequential model bake-off (bunching class), 109{,}029 instances. Ranked by F1. The static threshold is a non-learning reference}{table.caption.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{12}{section.4}\protected@file@percent }
-\newlabel{sec:experiments}{{4}{12}{Experiments}{section.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Setup}{12}{section*.12}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Evaluation}{12}{section*.13}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Baselines and bake-off}{12}{section*.14}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Hyperparameters}{12}{section*.15}\protected@file@percent }
@@ -98,9 +98,9 @@
 \newlabel{fig:lead}{{6}{13}{Nudge lead time for ARF: minutes between a fired warning and the observed bunching}{figure.caption.18}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Results}{13}{section.5}\protected@file@percent }
 \newlabel{sec:results}{{5}{13}{Results}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Before: bunching in the recorded data}{13}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:before}{{5.1}{13}{Before: bunching in the recorded data}{subsection.5.1}{}}
 \citation{Enayatollahi2019}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Before: bunching in the recorded data}{14}{subsection.5.1}\protected@file@percent }
-\newlabel{sec:before}{{5.1}{14}{Before: bunching in the recorded data}{subsection.5.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Headway irregularity (CV)}{14}{subsubsection.5.1.1}\protected@file@percent }
 \newlabel{sec:b-cv}{{5.1.1}{14}{Headway irregularity (CV)}{subsubsection.5.1.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}How close the buses run (headway ratio)}{14}{subsubsection.5.1.2}\protected@file@percent }
@@ -113,28 +113,28 @@
 \newlabel{sec:b-sev}{{5.1.4}{14}{Severity over the day}{subsubsection.5.1.4}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.5}Seeing bunching directly (string diagram)}{14}{subsubsection.5.1.5}\protected@file@percent }
 \newlabel{sec:b-string}{{5.1.5}{14}{Seeing bunching directly (string diagram)}{subsubsection.5.1.5}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.6}Travel-time context (congestion, not a nudge target)}{15}{subsubsection.5.1.6}\protected@file@percent }
-\newlabel{sec:b-travel}{{5.1.6}{15}{Travel-time context (congestion, not a nudge target)}{subsubsection.5.1.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.6}Travel-time context (congestion, not a nudge target)}{14}{subsubsection.5.1.6}\protected@file@percent }
+\newlabel{sec:b-travel}{{5.1.6}{14}{Travel-time context (congestion, not a nudge target)}{subsubsection.5.1.6}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Travel-time context (``before''): median terminal-to-terminal trip time, peak versus off-peak. Real congestion, but not a target of the nudge (cf.\ Section~\ref {sec:a-travel}).}}{15}{table.caption.19}\protected@file@percent }
 \newlabel{tab:travel}{{8}{15}{Travel-time context (``before''): median terminal-to-terminal trip time, peak versus off-peak. Real congestion, but not a target of the nudge (cf.\ Section~\ref {sec:a-travel})}{table.caption.19}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Distribution of the realised headway as a fraction of the local-normal headway. Mass left of the dashed lines is service that is in warning ($<0.60$) or bunched ($<0.40$).}}{15}{figure.caption.20}\protected@file@percent }
 \newlabel{fig:ratiohist}{{7}{15}{Distribution of the realised headway as a fraction of the local-normal headway. Mass left of the dashed lines is service that is in warning ($<0.60$) or bunched ($<0.40$)}{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}After: the same measurements, after the nudge}{15}{subsection.5.2}\protected@file@percent }
-\newlabel{sec:after}{{5.2}{15}{After: the same measurements, after the nudge}{subsection.5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Within-window headway coefficient of variation per route, peak versus off-peak. Higher is more irregular; the peak is consistently worse.}}{16}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:cv}{{8}{16}{Within-window headway coefficient of variation per route, peak versus off-peak. Higher is more irregular; the peak is consistently worse}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Within-window headway coefficient of variation per route, peak versus off-peak. Higher is more irregular; the peak is consistently worse.}}{15}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:cv}{{8}{15}{Within-window headway coefficient of variation per route, peak versus off-peak. Higher is more irregular; the peak is consistently worse}{figure.caption.21}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Mean passenger wait per route decomposed into the even-headway ideal ($\bar  h/2$) and the \emph  {avoidable} excess caused by irregularity (Eq.~\ref {eq:excess}).}}{16}{figure.caption.22}\protected@file@percent }
 \newlabel{fig:excess}{{9}{16}{Mean passenger wait per route decomposed into the even-headway ideal ($\bar h/2$) and the \emph {avoidable} excess caused by irregularity (Eq.~\ref {eq:excess})}{figure.caption.22}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Mean bunching severity ($\max (0,1-\text  {headway ratio})$) by hour of day, per route; shaded bands are the morning and evening peaks.}}{16}{figure.caption.23}\protected@file@percent }
 \newlabel{fig:severity}{{10}{16}{Mean bunching severity ($\max (0,1-\text {headway ratio})$) by hour of day, per route; shaded bands are the morning and evening peaks}{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Per-bus trajectories (``string diagram'') for one route reconstructed from raw OD. Each line is one bus over time; converging or crossing lines are bunching events. Orange/red markers show fired nudges and observed bunching. The signal exists because OD keeps individual vehicles and exact timestamps; aggregation into per-interval counts destroys it.}}{17}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:string}{{11}{17}{Per-bus trajectories (``string diagram'') for one route reconstructed from raw OD. Each line is one bus over time; converging or crossing lines are bunching events. Orange/red markers show fired nudges and observed bunching. The signal exists because OD keeps individual vehicles and exact timestamps; aggregation into per-interval counts destroys it}{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}After: the same measurements, after the nudge}{17}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:after}{{5.2}{17}{After: the same measurements, after the nudge}{subsection.5.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Each ``before'' measurement (Section~\ref {sec:before}) and its matching ``after'' subsection (Section~\ref {sec:after}), with the verdict.}}{17}{table.caption.25}\protected@file@percent }
 \newlabel{tab:mirror}{{9}{17}{Each ``before'' measurement (Section~\ref {sec:before}) and its matching ``after'' subsection (Section~\ref {sec:after}), with the verdict}{table.caption.25}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Before (actual March 2024) versus after (counterfactual nudge), from $\approx $$11{,}000$ ease-offs. ``Improvement'' is the reduction from before to after. The lower block lists indicators that the nudge is not designed to move (it evens spacing, it is not a speed-up).}}{17}{table.caption.26}\protected@file@percent }
-\newlabel{tab:panel}{{10}{17}{Before (actual March 2024) versus after (counterfactual nudge), from $\approx $$11{,}000$ ease-offs. ``Improvement'' is the reduction from before to after. The lower block lists indicators that the nudge is not designed to move (it evens spacing, it is not a speed-up)}{table.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Per-bus trajectories (``string diagram'') for one route reconstructed from raw OD. Each line is one bus over time; converging or crossing lines are bunching events. Orange/red markers show fired nudges and observed bunching. The signal exists because OD keeps individual vehicles and exact timestamps; aggregation into per-interval counts destroys it.}}{18}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:string}{{11}{18}{Per-bus trajectories (``string diagram'') for one route reconstructed from raw OD. Each line is one bus over time; converging or crossing lines are bunching events. Orange/red markers show fired nudges and observed bunching. The signal exists because OD keeps individual vehicles and exact timestamps; aggregation into per-interval counts destroys it}{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Headway irregularity (CV) --- improves}{18}{subsubsection.5.2.1}\protected@file@percent }
-\newlabel{sec:a-cv}{{5.2.1}{18}{Headway irregularity (CV) --- improves}{subsubsection.5.2.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Headway irregularity (CV) --- improves}{17}{subsubsection.5.2.1}\protected@file@percent }
+\newlabel{sec:a-cv}{{5.2.1}{17}{Headway irregularity (CV) --- improves}{subsubsection.5.2.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Before (actual March 2024) versus after (counterfactual nudge), from $\approx $$11{,}000$ ease-offs. ``Improvement'' is the reduction from before to after. The lower block lists indicators that the nudge is not designed to move (it evens spacing, it is not a speed-up).}}{18}{table.caption.26}\protected@file@percent }
+\newlabel{tab:panel}{{10}{18}{Before (actual March 2024) versus after (counterfactual nudge), from $\approx $$11{,}000$ ease-offs. ``Improvement'' is the reduction from before to after. The lower block lists indicators that the nudge is not designed to move (it evens spacing, it is not a speed-up)}{table.caption.26}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}How close the buses run --- improves}{18}{subsubsection.5.2.2}\protected@file@percent }
 \newlabel{sec:a-ratio}{{5.2.2}{18}{How close the buses run --- improves}{subsubsection.5.2.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}Avoidable passenger waiting --- improves}{18}{subsubsection.5.2.3}\protected@file@percent }
@@ -143,37 +143,34 @@
 \newlabel{sec:a-sev}{{5.2.4}{18}{Severity over the day --- improves}{subsubsection.5.2.4}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.5}Seeing bunching directly (string diagram) --- improves}{18}{subsubsection.5.2.5}\protected@file@percent }
 \newlabel{sec:a-string}{{5.2.5}{18}{Seeing bunching directly (string diagram) --- improves}{subsubsection.5.2.5}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.6}Travel-time context --- not a target}{19}{subsubsection.5.2.6}\protected@file@percent }
-\newlabel{sec:a-travel}{{5.2.6}{19}{Travel-time context --- not a target}{subsubsection.5.2.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.6}Travel-time context --- not a target}{18}{subsubsection.5.2.6}\protected@file@percent }
+\newlabel{sec:a-travel}{{5.2.6}{18}{Travel-time context --- not a target}{subsubsection.5.2.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{18}{section.6}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{18}{Discussion}{section.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Counterfactual effect of the nudge (simulation): bunching events, headway CV, and avoidable wait, for the baseline versus the nudge applied on all fired warnings and on true-positive warnings only.}}{19}{figure.caption.27}\protected@file@percent }
 \newlabel{fig:cf}{{12}{19}{Counterfactual effect of the nudge (simulation): bunching events, headway CV, and avoidable wait, for the baseline versus the nudge applied on all fired warnings and on true-positive warnings only}{figure.caption.27}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Sensitivity of the simulated reduction in bunching and in excess wait to the assumed per-stop ease-off magnitude. The effect is stable across $4$--$16$~s.}}{19}{figure.caption.28}\protected@file@percent }
 \newlabel{fig:cfsens}{{13}{19}{Sensitivity of the simulated reduction in bunching and in excess wait to the assumed per-stop ease-off magnitude. The effect is stable across $4$--$16$~s}{figure.caption.28}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{19}{section.6}\protected@file@percent }
-\newlabel{sec:discussion}{{6}{19}{Discussion}{section.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Bunching severity by hour, before (recorded) versus after (simulated nudge). The ``after'' curve sits at or below the ``before'' curve all day; shaded bands are the morning and evening commute peaks.}}{20}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:sevafter}{{14}{20}{Bunching severity by hour, before (recorded) versus after (simulated nudge). The ``after'' curve sits at or below the ``before'' curve all day; shaded bands are the morning and evening commute peaks}{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Per-bus trajectories on the simulated ``after'' arrival times (same route as Fig.~\ref {fig:string}). Fewer lines converge once closing buses ease off.}}{20}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:stringafter}{{15}{20}{Per-bus trajectories on the simulated ``after'' arrival times (same route as Fig.~\ref {fig:string}). Fewer lines converge once closing buses ease off}{figure.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Bunching severity by hour, before (recorded) versus after (simulated nudge). The ``after'' curve sits at or below the ``before'' curve all day; shaded bands are the morning and evening commute peaks.}}{19}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:sevafter}{{14}{19}{Bunching severity by hour, before (recorded) versus after (simulated nudge). The ``after'' curve sits at or below the ``before'' curve all day; shaded bands are the morning and evening commute peaks}{figure.caption.29}{}}
 \citation{Yu2016}
 \citation{MoreiraMatias2016}
 \citation{Daganzo2009}
 \citation{DaganzoPilachowski2011}
 \citation{MoreiraMatias2016}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Per-bus trajectories on the simulated ``after'' arrival times (same route as Fig.~\ref {fig:string}). Fewer lines converge once closing buses ease off.}}{20}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:stringafter}{{15}{20}{Per-bus trajectories on the simulated ``after'' arrival times (same route as Fig.~\ref {fig:string}). Fewer lines converge once closing buses ease off}{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {paragraph}{Skill is not enough; lead time is the deciding factor.}{20}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Why the benefit is variance-driven, not a faster average.}{20}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Relation to prior anti-bunching approaches.}{20}{section*.33}\protected@file@percent }
 \citation{Phillips2015}
-\@writefile{toc}{\contentsline {paragraph}{Skill is not enough; lead time is the deciding factor.}{21}{section*.31}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Why the benefit is variance-driven, not a faster average.}{21}{section*.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Relation to prior anti-bunching approaches.}{21}{section*.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{What would have to hold in deployment.}{21}{section*.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{What this does and does not establish.}{21}{section*.35}\protected@file@percent }
 \citation{Bartholdi2012}
 \citation{MartinezEstupinan2023}
-\@writefile{toc}{\contentsline {paragraph}{What we deliberately do not claim.}{22}{section*.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Local feasibility (Salvador)}{22}{section*.37}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Limitations}{22}{section*.38}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Safety, equity, privacy}{22}{section*.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{22}{section.7}\protected@file@percent }
-\newlabel{sec:conclusion}{{7}{22}{Conclusion}{section.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{What would have to hold in deployment.}{21}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{What this does and does not establish.}{21}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{What we deliberately do not claim.}{21}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Local feasibility (Salvador)}{21}{section*.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitations}{21}{section*.38}\protected@file@percent }
 \bibstyle{plainnat}
 \bibdata{references}
 \bibcite{Aguiar2024}{{1}{2024}{{Aguiar et~al.}}{{Aguiar, Krawczyk, and Cano}}}
@@ -181,6 +178,9 @@
 \bibcite{Bartholdi2012}{{3}{2012}{{Bartholdi~III and Eisenstein}}{{}}}
 \bibcite{Bifet2007}{{4}{2007}{{Bifet and Gavald\`{a}}}{{}}}
 \bibcite{Bifet2009}{{5}{2009}{{Bifet and Gavald\`{a}}}{{}}}
+\@writefile{toc}{\contentsline {paragraph}{Safety, equity, privacy}{22}{section*.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{22}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{22}{Conclusion}{section.7}{}}
 \bibcite{BorgesSantos2022}{{6}{2022}{{Borges~Santos et~al.}}{{Borges~Santos, S.~Pires, Cassimiro~Nascimento, and de~Queiroz}}}
 \bibcite{CapyMOA2024}{{7}{2024}{{CapyMOA Developers}}{{}}}
 \bibcite{Daganzo2009}{{8}{2009}{{Daganzo}}{{}}}
