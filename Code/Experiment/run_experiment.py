@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 """Stage 2: processed features CSV -> predictions / metrics / nudges / drift (CapyMOA).
 
-Runs HAT and ARF prequentially (test-then-train, chronological), computes imbalance-aware
-metrics + nudge lead time, and saves the artifacts the demo app consumes.
+Runs the full model set (HAT, ARF, Hoeffding Tree, EFDT, KNN, Naive Bayes) prequentially
+(test-then-train, chronological), computes imbalance-aware metrics + nudge lead time for
+each, and saves the artifacts the demo app consumes.
 
 Usage:
     python run_experiment.py [--config config.yaml]

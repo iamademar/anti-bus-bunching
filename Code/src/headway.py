@@ -62,7 +62,7 @@ def load_od(od_dir: Path, routes: list[str], directions: list[str],
 
 
 def drop_nonmonotonic_trips(od: pd.DataFrame) -> tuple[pd.DataFrame, float]:
-    """Drop trips whose stop_time is not non-decreasing along pt_sequence (~2-3%)."""
+    """Drop trips whose stop_time is not non-decreasing along pt_sequence (~23% at the reported scope)."""
     od = od.sort_values(["trip_id", "pt_sequence", "stop_time"])
     good_ids = []
     for tid, g in od.groupby("trip_id", sort=False):
