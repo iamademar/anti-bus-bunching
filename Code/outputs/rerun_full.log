@@ -1,0 +1,12 @@
+[run] loaded 109,029 instances from /Users/ademartutor/Documents/UoW/Trimester A - 2026/COMPX523 - Machine Learning for Data Streams/Assignment 3/anti-bus-bunching/Code/data/processed/features.csv
+  [save] outputs -> /Users/ademartutor/Documents/UoW/Trimester A - 2026/COMPX523 - Machine Learning for Data Streams/Assignment 3/anti-bus-bunching/Code/outputs
+
+[run] metrics (bunching class):
+  static_threshold    recall=0.890  F1=0.909  bal_acc=0.904  lead=None
+  previous_headway    recall=0.162  F1=0.166  bal_acc=0.333  lead=None
+  HAT                 recall=0.901  F1=0.907  bal_acc=0.899  lead=28.483333333333334
+  ARF                 recall=0.915  F1=0.916  bal_acc=0.915  lead=28.383333333333333
+  HoeffdingTree       recall=0.848  F1=0.886  bal_acc=0.791  lead=26.216666666666665
+  EFDT                recall=0.836  F1=0.877  bal_acc=0.789  lead=26.833333333333332
+  KNN                 recall=0.721  F1=0.761  bal_acc=0.728  lead=29.45
+  NaiveBayes          recall=0.000  F1=0.000  bal_acc=0.333  lead=None

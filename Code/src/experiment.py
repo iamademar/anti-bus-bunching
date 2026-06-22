@@ -24,6 +24,34 @@ from .features import FEATURE_COLS
 
 BUNCHING = 2  # class id
 
+# Full prequential model set. The first two (HAT, ARF) are the adaptive learners the
+# demo/report headline; the rest are the bake-off candidates. All are run test-then-train
+# on the SAME stream so every model gets a prediction column AND a nudge lead time.
+PREQUENTIAL_MODELS = ("HAT", "ARF", "HoeffdingTree", "EFDT", "KNN", "NaiveBayes")
+
+
+def _model_factories(schema, cfg):
+    """Name -> zero-arg constructor for every prequential candidate, sharing config knobs."""
+    from capymoa.classifier import (
+        NaiveBayes, KNN, HoeffdingTree, EFDT,
+        HoeffdingAdaptiveTree, AdaptiveRandomForestClassifier,
+    )
+    m = cfg.model
+    seed = int(m["random_seed"])
+    gp = int(m["grace_period"])
+    ens = int(m["arf_ensemble_size"])
+    return {
+        # HAT has a built-in ADWIN drift detector; grace_period controls split frequency.
+        "HAT": lambda: HoeffdingAdaptiveTree(schema=schema, random_seed=seed, grace_period=gp),
+        # ARF: online bagging (lambda=6), random feature subspaces, per-tree drift adaptation.
+        "ARF": lambda: AdaptiveRandomForestClassifier(
+            schema=schema, random_seed=seed, ensemble_size=ens, lambda_param=6.0),
+        "HoeffdingTree": lambda: HoeffdingTree(schema=schema, random_seed=seed, grace_period=gp),
+        "EFDT": lambda: EFDT(schema=schema, random_seed=seed, grace_period=gp),
+        "KNN": lambda: KNN(schema=schema, random_seed=seed, k=5, window_size=1000),
+        "NaiveBayes": lambda: NaiveBayes(schema=schema, random_seed=seed),
+    }
+
 
 def _make_stream(X: np.ndarray, y: np.ndarray):
     from capymoa.stream import NumpyStream
@@ -37,27 +65,8 @@ def _make_stream(X: np.ndarray, y: np.ndarray):
     )
 
 
-def _build_models(schema, cfg):
-    from capymoa.classifier import HoeffdingAdaptiveTree, AdaptiveRandomForestClassifier
-    m = cfg.model
-    seed = int(m["random_seed"])
-    return {
-        # HAT has a built-in ADWIN drift detector; grace_period controls split frequency.
-        "HAT": HoeffdingAdaptiveTree(
-            schema=schema, random_seed=seed, grace_period=int(m["grace_period"]),
-        ),
-        # ARF: online bagging (lambda=6), random feature subspaces, per-tree drift adaptation.
-        # Note: ARF tunes its base trees internally; ensemble_size is the key knob here.
-        "ARF": AdaptiveRandomForestClassifier(
-            schema=schema, random_seed=seed,
-            ensemble_size=int(m["arf_ensemble_size"]),
-            lambda_param=6.0,
-        ),
-    }
-
-
 def run_prequential(df: pd.DataFrame, cfg) -> dict:
-    """Run HAT + ARF prequentially. Returns per-instance predictions and rolling metrics."""
+    """Run all prequential models. Returns per-instance predictions and rolling metrics."""
     ensure_java_home()
     from capymoa.drift.detectors import ADWIN
 
@@ -90,10 +99,10 @@ def run_prequential(df: pd.DataFrame, cfg) -> dict:
         ratio = df["headway_ratio"].replace(0, np.nan).to_numpy()
         preds_frame["local_median_headway"] = df["headway_min"].to_numpy() / ratio
 
-    for name in ("HAT", "ARF"):
+    for name in PREQUENTIAL_MODELS:
         stream = _make_stream(X, y)
         schema = stream.get_schema()
-        model = _build_models(schema, cfg)[name]
+        model = _model_factories(schema, cfg)[name]()
         drift = ADWIN(delta=float(cfg.model["adwin_delta"]))
 
         preds = np.empty(n, dtype=int)
@@ -286,8 +295,8 @@ def build_metrics_table(pred_frame: pd.DataFrame, cfg) -> dict:
         y, B.static_threshold(pred_frame, lab["bunch_frac"], lab["warn_frac"]))
     table["previous_headway"] = classification_metrics(
         y, B.previous_headway_persistence(pred_frame, lab["bunch_frac"], lab["warn_frac"]))
-    # models
-    for name in ("HAT", "ARF"):
+    # models: every prediction column gets imbalance-aware metrics AND a nudge lead time
+    for name in PREQUENTIAL_MODELS:
         col = f"pred_{name}"
         if col in pred_frame:
             m = classification_metrics(y, pred_frame[col].to_numpy())
