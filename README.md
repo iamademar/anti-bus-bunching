@@ -37,7 +37,8 @@ anti-bus-bunching/
     ├── pipeline_walkthrough.ipynb  # narrated, runnable notebook covering the whole pipeline (run from Code/)
     ├── Preprocessing/         # Stage 1 entry script + README
     ├── Experiment/            # Stage 2 entry scripts + README
-    └── Simulation/            # Stage 3 entry scripts + README
+    ├── Simulation/            # Stage 3 entry scripts + README
+    └── Verification/          # standalone checks that re-prove key data claims
 ```
 
 ## Data
@@ -169,6 +170,22 @@ Order: `prepare_data` feeds `run_experiment` and `make_evidence`; `run_experimen
 notebook. The before/after
 numeric panel comes from `outputs/beforeafter_panel.csv` and `simulation_results.json`, and Figure 1
 in the report is an external adapted image, not produced by the pipeline.
+
+### Verification checks (`Code/Verification/`)
+
+These are standalone scripts that re-prove specific data claims the report relies on. They are not
+part of the pipeline run order; each is self-contained and exits `0` if its claim holds and `1` if it
+fails, so they double as assertions. Run each from `Code/`.
+
+| Run (from `Code/`) | Proves | Needs raw OD? |
+|--------------------|--------|---------------|
+| `python Verification/check_trip_id_is_one_bus.py` | A `trip_id` is exactly one physical bus on one run, so the headway must be keyed on the stop, not on `trip_id`. | No (uses the committed `features.csv`) |
+| `python Verification/check_headway_key_needs_all_three.py` | The headway key needs all three of `(route, direction, stop_id)`; dropping any one corrupts the gap. | No |
+| `python Verification/reproduce_preprocessing_chain.py` | Re-runs Stage 1 from the raw OD and reproduces the committed `features.csv` **exactly** (185,197 → 116,905 → 109,029 rows; 2,507 → 1,944 → 1,898 trips), including the 22.5% non-monotonic-trip drop and the 21,123 bunched arrivals behind the 19.4% prevalence figure. | Yes (reads the OD Parquet) |
+
+`reproduce_preprocessing_chain.py` resolves the OD folder from `paths.od_dir` in `config.yaml` (as the
+pipeline does), or you can pass the folder as the first argument; it exits `2` with a clear message when
+the raw data is absent. The other two checks run off the committed `features.csv` and need no download.
 
 ### Where the report figures come from
 
