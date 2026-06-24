@@ -157,12 +157,12 @@ optional travel-time table noted above).
 
 | Run (from `Code/`) | Produces | Used in the report |
 |--------------------|----------|--------------------|
-| `python Preprocessing/prepare_data.py` | `data/processed/features.csv` | §3.4 Preprocessing and §3.5 "How the algorithm builds the stream": the dataset and Tables 4-5 (engineered columns and the worked example) |
-| `python Experiment/run_experiment.py` | `outputs/predictions.csv`, `metrics.json`, `nudges.json`, `drift_events.json` | §4.1 Bake-off results: the model metrics (Table 6); also the input the simulation and figure steps consume |
-| `python Experiment/make_evidence.py` | `outputs/evidence_*`, `headway_cv_by_route.png`, `headway_ratio_hist.png`, `excess_wait_by_route.png`, `severity_timeseries.png` | §5.1 Before: headway CV (§5.1.1), headway ratio (§5.1.2), avoidable wait (§5.1.3), severity over the day (§5.1.4) |
-| `python Simulation/run_simulation.py` | `outputs/simulation_results.json`, `counterfactual_comparison.png`, `counterfactual_sensitivity.png` | §5.2 After: the counterfactual comparison and ease-off sensitivity figures, and the numbers in Table 8 |
-| `python Simulation/make_beforeafter.py` | `outputs/beforeafter_panel.csv`, `beforeafter_summary.json`, `severity_timeseries_after.png`, `string_diagram_1007_I_after.png` (plus `beforeafter_travel_time.csv` only when the raw SUNT data is present) | §5.2 After: severity after the nudge (§5.2.4) and the after string diagram (§5.2.5); the travel-time context numbers need the raw SUNT data, otherwise this step skips that one table and keeps the committed file |
-| `python Simulation/make_figures.py` | `rolling_accuracy.png`, `string_diagram_1007_I.png`, `lead_time_hist_ARF.png` | §4.1 Bake-off: rolling accuracy and nudge lead time; §5.1.5 Before: the string diagram |
+| `python Preprocessing/prepare_data.py` | `data/processed/features.csv` | §3 Methodology (Data Preprocessing): the dataset and the engineered-feature tables (engineered columns and the worked example) |
+| `python Experiment/run_experiment.py` | `outputs/predictions.csv`, `metrics.json`, `nudges.json`, `drift_events.json` | §4 Experiments / §5 Results: the model bake-off metrics (Table 4); also the input the simulation and figure steps consume |
+| `python Experiment/make_evidence.py` | `outputs/evidence_*`, `headway_cv_by_route.png`, `headway_ratio_hist.png`, `excess_wait_by_route.png`, `severity_timeseries.png` | §5 Results (Before): headway CV, headway ratio, avoidable wait, and severity over the day |
+| `python Simulation/run_simulation.py` | `outputs/simulation_results.json`, `counterfactual_comparison.png`, `counterfactual_sensitivity.png` | §5 Results (After): the counterfactual comparison and ease-off sensitivity figures, and the counterfactual numbers |
+| `python Simulation/make_beforeafter.py` | `outputs/beforeafter_panel.csv`, `beforeafter_summary.json`, `severity_timeseries_after.png`, `string_diagram_1007_I_after.png` (plus `beforeafter_travel_time.csv` only when the raw SUNT data is present) | §5 Results (After): severity after the nudge and the after string diagram; the travel-time context numbers need the raw SUNT data, otherwise this step skips that one table and keeps the committed file |
+| `python Simulation/make_figures.py` | `rolling_accuracy.png`, `string_diagram_1007_I.png`, `lead_time_hist_ARF.png` | §4 Experiments (Bake-off): rolling accuracy and nudge lead time; §5 Results (Before): the string diagram |
 
 Order: `prepare_data` feeds `run_experiment` and `make_evidence`; `run_experiment` feeds
 `run_simulation` and `make_figures`; `run_simulation` feeds `make_beforeafter`.
